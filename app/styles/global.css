@@ -196,6 +196,10 @@ img:hover {
   height: 20px;
 }
 
+.posts-title {
+  margin-bottom: 30px;
+}
+
 .posts-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -205,13 +209,35 @@ img:hover {
 }
 
 .posts-list li {
-  padding: 20px;
   border: 1px #333 solid;
   border-radius: 5px;
 }
 
+.post-image-banner {
+  height: 200px;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.post-image-banner img {
+  height: auto;
+}
+
+.posts-list a {
+  color: white;
+}
+
+.posts-list a:hover {
+  color: rgb(255, 134, 134);
+}
+
 .posts-list li h3 {
-  margin-bottom: 5px;
+  margin: 10px 10px 0 10px;
+}
+
+.posts-list li p {
+  margin: 0 10px 10px 10px;
 }
 
 .error {
