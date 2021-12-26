@@ -1,32 +1,49 @@
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration
-} from "remix";
-import type { MetaFunction } from "remix";
+import { Link, LiveReload, Outlet } from 'remix'
+import globalStylesUrl from '~/styles/global.css'
 
-export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
-};
-
-export default function App() {
+const App: React.FC = () => {
   return (
-    <html lang="en">
+    <Document title='Remix Blog'>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </Document>
+  )
+}
+
+const Document: React.FC<{ title: string }> = ({ children, title }) => {
+  return (
+    <html lang='en'>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <Meta />
-        <Links />
+        <title>{title}</title>
+        <link rel='stylesheet' href={globalStylesUrl} />
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {children}
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
-  );
+  )
 }
+
+const Layout: React.FC = ({ children }) => {
+  return (
+    <>
+      <nav className='navbar'>
+        <Link to='/' className='logo'>
+          Remix
+        </Link>
+        <ul className="nav">
+          <li>
+            <Link to='/posts'>Posts</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="container">
+        {children}
+      </div>
+    </>
+  )
+}
+
+export default App
