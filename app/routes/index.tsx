@@ -1,6 +1,9 @@
 const Home: React.FC = () => {
   return (
     <>
+      <div className="img-container">
+        <img src='https://picsum.photos/seed/red/900/320' alt='Banner' />
+      </div>
       <h1>Welcome to Remix!</h1>
       <p>
         This is a simple blog built with <a href='https://remix.run'>Remix</a>. It's a
