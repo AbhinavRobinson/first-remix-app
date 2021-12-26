@@ -8,11 +8,17 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: rgb(24, 24, 24);
+  color: #fff;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: rgb(196, 95, 255);
+}
+
+a:hover {
+  color: rgb(255, 57, 57);
 }
 
 ul {
@@ -39,10 +45,23 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   margin-bottom: 30px;
-  background-color: #f4f4f4;
-  padding: 10px 30px;
+  /* Gradient dark */
+  background: linear-gradient(
+    to right,
+    rgba(71, 36, 136, 0.5),
+    rgba(158, 35, 26, 0.5)
+  );
+  padding: 15px auto;
+  height: 66px;
   text-transform: uppercase;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar ul {
@@ -56,20 +75,20 @@ p {
 }
 
 .navbar ul li a {
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
 }
 
 .navbar ul li a:hover {
-  color: #333;
+  color: #ccc;
   border-bottom: 1px solid #333;
 }
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: rgb(128, 95, 95);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -83,7 +102,7 @@ p {
 
 .btn-reverse {
   background: #fff;
-  color: #000;
+  color: #fff;
   border-color: #000;
 }
 

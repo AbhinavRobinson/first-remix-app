@@ -46,14 +46,16 @@ const Layout: React.FC = ({ children }) => {
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='logo'>
-          Remix
-        </Link>
-        <ul className="nav">
-          <li>
-            <Link to='/posts'>Posts</Link>
-          </li>
-        </ul>
+        <div className="container">
+          <Link to='/' className='logo'>
+            Remix
+          </Link>
+          <ul className="nav">
+            <li>
+              <Link to='/posts'>Posts</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div className="container">
         {children}
