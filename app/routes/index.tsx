@@ -1,3 +1,5 @@
+import { Outlet } from 'remix'
+
 const Home: React.FC = () => {
   return (
     <>

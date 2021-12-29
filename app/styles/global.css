@@ -70,7 +70,7 @@ img:hover {
   background: linear-gradient(
     to right,
     rgba(71, 36, 136, 0.5),
-    rgba(158, 35, 26, 0.5)
+    rgba(139, 7, 58, 0.5)
   );
   padding: 15px auto;
   height: 66px;
@@ -206,6 +206,7 @@ img:hover {
   gap: 20px;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .posts-list li {
@@ -221,7 +222,12 @@ img:hover {
 }
 
 .post-image-banner img {
+  filter: grayscale(100%);
   height: auto;
+}
+
+.post-image-banner img:hover {
+  filter: grayscale(0%);
 }
 
 .posts-list a {

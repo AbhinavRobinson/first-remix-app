@@ -2,9 +2,7 @@ import { Outlet } from 'remix'
 
 const Posts = () => {
   return (
-    <div>
-      <Outlet />
-    </div>
+    <Outlet />
   )
 }
 
